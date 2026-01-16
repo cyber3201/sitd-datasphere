@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250">
+  <rect x="0" y="0" width="800" height="250" fill="#F4F1D8" rx="8" />
+  
+  <!-- EAV -->
+  <g transform="translate(50, 50)">
+    <text x="100" y="-15" font-family="sans-serif" font-size="14" fill="#6B1D1A" font-weight="bold">Anti-Pattern: EAV (Entity-Attribute-Value)</text>
+    <rect x="0" y="0" width="250" height="150" fill="#fff" stroke="#6B1D1A" stroke-width="2" />
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#6B1D1A" stroke-width="1" />
+    <text x="30" y="20" font-size="12" font-weight="bold">Entity</text>
+    <text x="100" y="20" font-size="12" font-weight="bold">Attr</text>
+    <text x="180" y="20" font-size="12" font-weight="bold">Value</text>
+    
+    <text x="30" y="50" font-size="12">1</text><text x="100" y="50" font-size="12">Color</text><text x="180" y="50" font-size="12">Red</text>
+    <text x="30" y="70" font-size="12">1</text><text x="100" y="70" font-size="12">Size</text><text x="180" y="70" font-size="12">XL</text>
+    <text x="30" y="90" font-size="12">2</text><text x="100" y="90" font-size="12">Color</text><text x="180" y="90" font-size="12">Blue</text>
+    
+    <text x="125" y="130" text-anchor="middle" font-size="10" fill="#6B1D1A">Difficile à requêter, type unique</text>
+  </g>
+
+  <!-- Clean Table -->
+  <g transform="translate(420, 50)">
+    <text x="100" y="-15" font-family="sans-serif" font-size="14" fill="#1E3A8A" font-weight="bold">Pattern: Colonnes Explicites</text>
+    <rect x="0" y="0" width="250" height="80" fill="#fff" stroke="#1E3A8A" stroke-width="2" />
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#1E3A8A" stroke-width="1" />
+    <text x="30" y="20" font-size="12" font-weight="bold">ID</text>
+    <text x="100" y="20" font-size="12" font-weight="bold">Color</text>
+    <text x="180" y="20" font-size="12" font-weight="bold">Size</text>
+    
+    <text x="30" y="50" font-size="12">1</text><text x="100" y="50" font-size="12">Red</text><text x="180" y="50" font-size="12">XL</text>
+    
+    <text x="125" y="100" text-anchor="middle" font-size="10" fill="#1E3A8A">Rapide, typé, simple</text>
+  </g>
+</svg>

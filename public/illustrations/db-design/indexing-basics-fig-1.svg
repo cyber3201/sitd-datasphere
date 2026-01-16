@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <rect x="0" y="0" width="900" height="400" fill="#F4F1D8" rx="8" />
+  
+  <!-- Left: Full Scan -->
+  <g transform="translate(50, 50)">
+    <text x="100" y="-15" font-family="sans-serif" font-size="16" fill="#6B1D1A" font-weight="bold">Full Table Scan</text>
+    <rect x="0" y="0" width="200" height="300" fill="#fff" stroke="#6B1D1A" stroke-width="2" />
+    
+    <!-- Rows -->
+    <g transform="translate(10, 10)">
+      <rect x="0" y="0" width="180" height="30" fill="#eee" rx="2" />
+      <rect x="0" y="40" width="180" height="30" fill="#eee" rx="2" />
+      <rect x="0" y="80" width="180" height="30" fill="#eee" rx="2" />
+      <rect x="0" y="120" width="180" height="30" fill="#eee" rx="2" />
+      <rect x="0" y="160" width="180" height="30" fill="#eee" rx="2" />
+      <rect x="0" y="200" width="180" height="30" fill="#eee" rx="2" />
+      <rect x="0" y="240" width="180" height="30" fill="#FCA5A5" rx="2" /> <!-- Target -->
+      <text x="90" y="260" text-anchor="middle" font-size="12" font-weight="bold">Target</text>
+    </g>
+
+    <!-- Scan Arrow -->
+    <path d="M-30,20 L-30,260" stroke="#6B1D1A" stroke-width="4" marker-end="url(#arrow-red)" stroke-dasharray="8" />
+    <text x="-40" y="140" transform="rotate(-90 -40,140)" font-size="14" fill="#6B1D1A" font-weight="bold">Checking every row...</text>
+  </g>
+
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6B1D1A" />
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#059669" />
+    </marker>
+  </defs>
+
+  <!-- Right: Index Seek -->
+  <g transform="translate(400, 50)">
+    <text x="200" y="-15" font-family="sans-serif" font-size="16" fill="#059669" font-weight="bold">Index Seek (B-Tree)</text>
+    
+    <!-- Tree Root -->
+    <rect x="180" y="0" width="60" height="40" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="4" />
+    <text x="210" y="25" text-anchor="middle">Root</text>
+
+    <!-- Level 2 -->
+    <rect x="80" y="80" width="60" height="40" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="4" />
+    <rect x="280" y="80" width="60" height="40" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="4" />
+
+    <!-- Level 3 -->
+    <rect x="30" y="160" width="60" height="40" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="4" />
+    <rect x="130" y="160" width="60" height="40" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="4" />
+    <rect x="230" y="160" width="60" height="40" fill="#D1FAE5" stroke="#059669" stroke-width="2" rx="4" />
+    <rect x="330" y="160" width="60" height="40" fill="#6EE7B7" stroke="#059669" stroke-width="3" rx="4" /> <!-- Leaf match -->
+    <text x="360" y="185" text-anchor="middle" font-weight="bold">Ptr</text>
+
+    <!-- Connectors -->
+    <path d="M210,40 L110,80" stroke="#059669" stroke-width="2" />
+    <path d="M210,40 L310,80" stroke="#059669" stroke-width="3" /> <!-- Path taken -->
+
+    <path d="M110,120 L60,160" stroke="#059669" stroke-width="1" />
+    <path d="M110,120 L160,160" stroke="#059669" stroke-width="1" />
+
+    <path d="M310,120 L260,160" stroke="#059669" stroke-width="1" />
+    <path d="M310,120 L360,160" stroke="#059669" stroke-width="3" marker-end="url(#arrow-green)" /> <!-- Path taken -->
+
+    <!-- Target Row -->
+    <g transform="translate(150, 250)">
+      <rect x="0" y="0" width="300" height="40" fill="#fff" stroke="#6B1D1A" stroke-width="1" />
+      <rect x="200" y="5" width="90" height="30" fill="#FCA5A5" rx="2" />
+      <text x="245" y="25" text-anchor="middle" font-size="10">Target Row</text>
+      
+      <!-- Pointer -->
+      <path d="M210,-50 L240,0" stroke="#059669" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrow-green)" />
+    </g>
+  </g>
+</svg>

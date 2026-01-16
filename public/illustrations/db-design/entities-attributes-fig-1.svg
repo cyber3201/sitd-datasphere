@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350">
+  <rect x="0" y="0" width="600" height="350" fill="#F4F1D8" rx="8" />
+  
+  <g transform="translate(150, 30)">
+    <!-- Header -->
+    <path d="M0,10 C0,4.5 4.5,0 10,0 L290,0 C295.5,0 300,4.5 300,10 L300,50 L0,50 Z" fill="#1E3A8A" />
+    <text x="150" y="32" font-family="sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Customer</text>
+    
+    <!-- Body -->
+    <rect x="0" y="50" width="300" height="240" fill="#fff" stroke="#1E3A8A" stroke-width="2" />
+    
+    <!-- Rows -->
+    <!-- Row 1: PK -->
+    <g transform="translate(20, 80)">
+      <rect x="-10" y="-15" width="280" height="30" fill="#B9D9C1" rx="4" opacity="0.3" />
+      <text x="0" y="5" font-family="monospace" font-size="14" font-weight="bold" fill="#1E3A8A">id</text>
+      <text x="250" y="5" font-family="sans-serif" font-size="12" fill="#6B1D1A" text-anchor="end" font-weight="bold">PK, UUID</text>
+    </g>
+    
+    <line x1="10" y1="105" x2="290" y2="105" stroke="#ddd" />
+
+    <!-- Row 2 -->
+    <g transform="translate(20, 130)">
+      <text x="0" y="5" font-family="monospace" font-size="14" fill="#111827">first_name</text>
+      <text x="250" y="5" font-family="sans-serif" font-size="12" fill="#4B5563" text-anchor="end">VARCHAR</text>
+    </g>
+    
+    <line x1="10" y1="155" x2="290" y2="155" stroke="#ddd" />
+
+    <!-- Row 3 -->
+    <g transform="translate(20, 180)">
+      <text x="0" y="5" font-family="monospace" font-size="14" fill="#111827">email</text>
+      <text x="250" y="5" font-family="sans-serif" font-size="12" fill="#4B5563" text-anchor="end">VARCHAR</text>
+    </g>
+
+    <line x1="10" y1="205" x2="290" y2="205" stroke="#ddd" />
+
+    <!-- Row 4 -->
+    <g transform="translate(20, 230)">
+      <text x="0" y="5" font-family="monospace" font-size="14" fill="#111827">created_at</text>
+      <text x="250" y="5" font-family="sans-serif" font-size="12" fill="#4B5563" text-anchor="end">TIMESTAMP</text>
+    </g>
+  </g>
+</svg>

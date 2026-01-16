@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect x="0" y="0" width="600" height="400" fill="#F4F1D8" rx="8" />
+  
+  <!-- Fact Table -->
+  <g transform="translate(250, 150)">
+    <rect x="-50" y="-50" width="100" height="100" fill="#1E3A8A" stroke="#fff" stroke-width="2" rx="4" />
+    <text x="0" y="-20" text-anchor="middle" fill="#fff" font-weight="bold" font-family="sans-serif">FACT</text>
+    <text x="0" y="0" text-anchor="middle" fill="#fff" font-size="10" font-family="sans-serif">Sales</text>
+    <text x="0" y="20" text-anchor="middle" fill="#fff" font-size="10" font-family="sans-serif">Metrics & FKs</text>
+  </g>
+
+  <!-- Dimensions -->
+  <!-- Top -->
+  <g transform="translate(250, 50)">
+    <rect x="-40" y="-30" width="80" height="60" fill="#B9D9C1" stroke="#1E3A8A" stroke-width="2" rx="4" />
+    <text x="0" y="5" text-anchor="middle" fill="#1E3A8A" font-weight="bold" font-size="12">Time</text>
+    <line x1="0" y1="30" x2="0" y2="100" stroke="#1E3A8A" stroke-width="2" />
+  </g>
+
+  <!-- Bottom -->
+  <g transform="translate(250, 350)">
+    <rect x="-40" y="-30" width="80" height="60" fill="#B9D9C1" stroke="#1E3A8A" stroke-width="2" rx="4" />
+    <text x="0" y="5" text-anchor="middle" fill="#1E3A8A" font-weight="bold" font-size="12">Product</text>
+    <line x1="0" y1="-30" x2="0" y2="-100" stroke="#1E3A8A" stroke-width="2" />
+  </g>
+
+  <!-- Left -->
+  <g transform="translate(100, 200)">
+    <rect x="-40" y="-30" width="80" height="60" fill="#B9D9C1" stroke="#1E3A8A" stroke-width="2" rx="4" />
+    <text x="0" y="5" text-anchor="middle" fill="#1E3A8A" font-weight="bold" font-size="12">Customer</text>
+    <line x1="40" y1="-50" x2="100" y2="-50" stroke="#1E3A8A" stroke-width="2" transform="rotate(-45 40 -50)" /> <!-- Hacky angle line -->
+    <line x1="40" y1="0" x2="100" y2="0" stroke="#1E3A8A" stroke-width="2" />
+  </g>
+
+  <!-- Right -->
+  <g transform="translate(500, 200)">
+    <rect x="-40" y="-30" width="80" height="60" fill="#B9D9C1" stroke="#1E3A8A" stroke-width="2" rx="4" />
+    <text x="0" y="5" text-anchor="middle" fill="#1E3A8A" font-weight="bold" font-size="12">Store</text>
+    <line x1="-40" y1="0" x2="-100" y2="0" stroke="#1E3A8A" stroke-width="2" />
+  </g>
+</svg>

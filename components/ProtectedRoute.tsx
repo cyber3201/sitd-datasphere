@@ -1,0 +1,29 @@
+
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import { Loader2 } from 'lucide-react';
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export const ProtectedRoute: React.FC<Props> = ({ children }) => {
+  const { user, isLoading } = useAuth();
+  const location = useLocation();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-dg-cream">
+        <Loader2 className="animate-spin text-dg-blue" size={40} />
+      </div>
+    );
+  }
+
+  if (!user) {
+    // Redirect to login but save the attempted location
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  return <>{children}</>;
+};
